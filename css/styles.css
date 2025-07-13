@@ -47,8 +47,14 @@ body {
     text-transform: uppercase;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .logo-image {
-    height: 50px;
+    height: 60px;
     width: auto;
 }
 
