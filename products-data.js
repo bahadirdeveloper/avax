@@ -1,10 +1,10 @@
 // AVAX SAVUNMA Ürün Verileri
 const PRODUCTS_DATA = [
     {
-        "name": "AKN SOĞUK İKLİM MONT",
+        "name": "AKN SOGUK IKLIM MONT",
         "category": "Mont / Yağmurluk",
         "description": "Ekstra sıcak tutma özelliği • Su geçirmez dış yüzey • Rüzgar geçirmez • Çıkarılabilir kapüşon • Çoklu fermuarlı cepler",
-        "thumbnail": "mont-yagmurluk/AKN SOĞUK İKLİM MONT /BEYAZ/136.webp",
+        "thumbnail": "mont-yagmurluk/AKN SOGUK IKLIM MONT /BEYAZ/136.webp",
         "variants": [
             {
                 "color": "BEYAZ",
