@@ -59,10 +59,10 @@ const PRODUCTS_DATA = [
         ]
     },
     {
-        "name": "RÜZGARLIK:YAĞMURLUK",
+        "name": "RÜZGARLIK-YAĞMURLUK",
         "category": "Mont / Yağmurluk",
         "description": "Hafif ve taşınabilir • %100 su geçirmez • Nefes alabilir kumaş • Kapüşonlu tasarım • Kompakt katlanabilir",
-        "thumbnail": "mont-yagmurluk/RÜZGARLIK:YAĞMURLUK /HAKİ/146.webp",
+        "thumbnail": "mont-yagmurluk/RÜZGARLIK-YAĞMURLUK /HAKİ/146.webp",
         "variants": [
             {
                 "color": "HAKİ",
