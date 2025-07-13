@@ -59,10 +59,10 @@ const PRODUCTS_DATA = [
         ]
     },
     {
-        "name": "RÜZGARLIK-YAĞMURLUK",
+        "name": "RUZGARLIK-YAGMURLUK",
         "category": "Mont / Yağmurluk",
         "description": "Hafif ve taşınabilir • %100 su geçirmez • Nefes alabilir kumaş • Kapüşonlu tasarım • Kompakt katlanabilir",
-        "thumbnail": "mont-yagmurluk/RÜZGARLIK-YAĞMURLUK /HAKİ/146.webp",
+        "thumbnail": "mont-yagmurluk/RUZGARLIK-YAGMURLUK /HAKI/146.webp",
         "variants": [
             {
                 "color": "HAKİ",
@@ -663,7 +663,7 @@ const PRODUCTS_DATA = [
         "name": "AKN AOUTDOOR 45 LT ÇANTA",
         "category": "Teçhizat \u0026 Aksesuar",
         "description": "45 litre hacim • Su geçirmez kumaş • Ergonomik sırt sistemi • Çoklu bölme organizasyonu • Molle bağlantı sistemi",
-        "thumbnail": "techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/HAKİ/306.webp",
+        "thumbnail": "techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/HAKI/306.webp",
         "variants": [
             {
                 "color": "HAKİ",
