@@ -1,0 +1,929 @@
+// AVAX SAVUNMA Ürün Verileri
+const PRODUCTS_DATA = [
+    {
+        "name": "AKN SOĞUK İKLİM MONT",
+        "category": "Mont / Yağmurluk",
+        "description": "Ekstra sıcak tutma özelliği • Su geçirmez dış yüzey • Rüzgar geçirmez • Çıkarılabilir kapüşon • Çoklu fermuarlı cepler",
+        "thumbnail": "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /BEYAZ/136.webp",
+        "variants": [
+            {
+                "color": "BEYAZ",
+                "images": [
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /BEYAZ/136.webp",
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /BEYAZ/137.webp",
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /BEYAZ/138.webp",
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /BEYAZ/139.webp",
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /BEYAZ/140.webp"
+                ]
+            },
+            {
+                "color": "HAKİ",
+                "images": [
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /HAKİ/131.webp",
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /HAKİ/132.webp",
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /HAKİ/133.webp",
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /HAKİ/134.webp",
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /HAKİ/135.webp"
+                ]
+            },
+            {
+                "color": "LAVİCERT",
+                "images": [
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /LAVİCERT/116.webp",
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /LAVİCERT/117.webp",
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /LAVİCERT/118.webp",
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /LAVİCERT/119.webp",
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /LAVİCERT/120.webp"
+                ]
+            },
+            {
+                "color": "SİYAH",
+                "images": [
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /SİYAH/121.webp",
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /SİYAH/122.webp",
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /SİYAH/123.webp",
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /SİYAH/124.webp",
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /SİYAH/125.webp"
+                ]
+            },
+            {
+                "color": "VİZON",
+                "images": [
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /VİZON/126.webp",
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /VİZON/127.webp",
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /VİZON/128.webp",
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /VİZON/129.webp",
+                    "products-mont-yagmurluk/AKN SOĞUK İKLİM MONT /VİZON/130.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "RÜZGARLIK:YAĞMURLUK",
+        "category": "Mont / Yağmurluk",
+        "description": "Hafif ve taşınabilir • %100 su geçirmez • Nefes alabilir kumaş • Kapüşonlu tasarım • Kompakt katlanabilir",
+        "thumbnail": "products-mont-yagmurluk/RÜZGARLIK:YAĞMURLUK /HAKİ/146.webp",
+        "variants": [
+            {
+                "color": "HAKİ",
+                "images": [
+                    "products-mont-yagmurluk/RÜZGARLIK:YAĞMURLUK /HAKİ/146.webp",
+                    "products-mont-yagmurluk/RÜZGARLIK:YAĞMURLUK /HAKİ/147.webp",
+                    "products-mont-yagmurluk/RÜZGARLIK:YAĞMURLUK /HAKİ/148.webp",
+                    "products-mont-yagmurluk/RÜZGARLIK:YAĞMURLUK /HAKİ/149.webp",
+                    "products-mont-yagmurluk/RÜZGARLIK:YAĞMURLUK /HAKİ/150.webp"
+                ]
+            },
+            {
+                "color": "SİYAH",
+                "images": [
+                    "products-mont-yagmurluk/RÜZGARLIK:YAĞMURLUK /SİYAH/141.webp",
+                    "products-mont-yagmurluk/RÜZGARLIK:YAĞMURLUK /SİYAH/142.webp",
+                    "products-mont-yagmurluk/RÜZGARLIK:YAĞMURLUK /SİYAH/143.webp",
+                    "products-mont-yagmurluk/RÜZGARLIK:YAĞMURLUK /SİYAH/144.webp",
+                    "products-mont-yagmurluk/RÜZGARLIK:YAĞMURLUK /SİYAH/145.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "VOGEL m1493 SÜET AYAKKABI",
+        "category": "Outdoor Ayakkabı",
+        "description": "Premium süet deri • Kaymaz taban teknolojisi • Ortopedik taban desteği • Su itici özellik • Günlük kullanıma uygun",
+        "thumbnail": "products-outdoor-ayakkabi/VOGEL m1493 SÜET AYAKKABI/BEJ/164.webp",
+        "variants": [
+            {
+                "color": "BEJ",
+                "images": [
+                    "products-outdoor-ayakkabi/VOGEL m1493 SÜET AYAKKABI/BEJ/164.webp",
+                    "products-outdoor-ayakkabi/VOGEL m1493 SÜET AYAKKABI/BEJ/165.webp",
+                    "products-outdoor-ayakkabi/VOGEL m1493 SÜET AYAKKABI/BEJ/166.webp",
+                    "products-outdoor-ayakkabi/VOGEL m1493 SÜET AYAKKABI/BEJ/167.webp",
+                    "products-outdoor-ayakkabi/VOGEL m1493 SÜET AYAKKABI/BEJ/168.webp"
+                ]
+            },
+            {
+                "color": "HAKİ",
+                "images": [
+                    "products-outdoor-ayakkabi/VOGEL m1493 SÜET AYAKKABI/HAKİ/154.webp",
+                    "products-outdoor-ayakkabi/VOGEL m1493 SÜET AYAKKABI/HAKİ/155.webp",
+                    "products-outdoor-ayakkabi/VOGEL m1493 SÜET AYAKKABI/HAKİ/156.webp",
+                    "products-outdoor-ayakkabi/VOGEL m1493 SÜET AYAKKABI/HAKİ/157.webp",
+                    "products-outdoor-ayakkabi/VOGEL m1493 SÜET AYAKKABI/HAKİ/158.webp"
+                ]
+            },
+            {
+                "color": "KAHVE",
+                "images": [
+                    "products-outdoor-ayakkabi/VOGEL m1493 SÜET AYAKKABI/KAHVE/151.webp",
+                    "products-outdoor-ayakkabi/VOGEL m1493 SÜET AYAKKABI/KAHVE/152.webp",
+                    "products-outdoor-ayakkabi/VOGEL m1493 SÜET AYAKKABI/KAHVE/153.webp"
+                ]
+            },
+            {
+                "color": "SİYAH",
+                "images": [
+                    "products-outdoor-ayakkabi/VOGEL m1493 SÜET AYAKKABI/SİYAH/159.webp",
+                    "products-outdoor-ayakkabi/VOGEL m1493 SÜET AYAKKABI/SİYAH/160.webp",
+                    "products-outdoor-ayakkabi/VOGEL m1493 SÜET AYAKKABI/SİYAH/161.webp",
+                    "products-outdoor-ayakkabi/VOGEL m1493 SÜET AYAKKABI/SİYAH/162.webp",
+                    "products-outdoor-ayakkabi/VOGEL m1493 SÜET AYAKKABI/SİYAH/163.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "BİSİKLET KISA KOL TAKTİK",
+        "category": "Outdoor T-Shirt",
+        "description": "Hızlı kuruma özelliği • UV korumalı kumaş • Antibakteriyel özellik • Raglan kol kesimi • Spor aktivitelere uygun",
+        "thumbnail": "products-outdoor-tshirt/BİSİKLET KISA KOL TAKTİK/BEJ/76.webp",
+        "variants": [
+            {
+                "color": "BEJ",
+                "images": [
+                    "products-outdoor-tshirt/BİSİKLET KISA KOL TAKTİK/BEJ/76.webp",
+                    "products-outdoor-tshirt/BİSİKLET KISA KOL TAKTİK/BEJ/77.webp",
+                    "products-outdoor-tshirt/BİSİKLET KISA KOL TAKTİK/BEJ/78.webp",
+                    "products-outdoor-tshirt/BİSİKLET KISA KOL TAKTİK/BEJ/79.webp",
+                    "products-outdoor-tshirt/BİSİKLET KISA KOL TAKTİK/BEJ/80.webp"
+                ]
+            },
+            {
+                "color": "HAKİ",
+                "images": [
+                    "products-outdoor-tshirt/BİSİKLET KISA KOL TAKTİK/HAKİ/66.webp",
+                    "products-outdoor-tshirt/BİSİKLET KISA KOL TAKTİK/HAKİ/67.webp",
+                    "products-outdoor-tshirt/BİSİKLET KISA KOL TAKTİK/HAKİ/68.webp",
+                    "products-outdoor-tshirt/BİSİKLET KISA KOL TAKTİK/HAKİ/69.webp",
+                    "products-outdoor-tshirt/BİSİKLET KISA KOL TAKTİK/HAKİ/70.webp"
+                ]
+            },
+            {
+                "color": "SİYAH",
+                "images": [
+                    "products-outdoor-tshirt/BİSİKLET KISA KOL TAKTİK/SİYAH/71.webp",
+                    "products-outdoor-tshirt/BİSİKLET KISA KOL TAKTİK/SİYAH/72.webp",
+                    "products-outdoor-tshirt/BİSİKLET KISA KOL TAKTİK/SİYAH/73.webp",
+                    "products-outdoor-tshirt/BİSİKLET KISA KOL TAKTİK/SİYAH/74.webp",
+                    "products-outdoor-tshirt/BİSİKLET KISA KOL TAKTİK/SİYAH/75.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "BSKLT YAKA UZUN KOL TAKTİK TİŞÖRT",
+        "category": "Outdoor T-Shirt",
+        "description": "Dört mevsim kullanım • Ter emici kumaş • Bisiklet yaka detay • Esnek ve rahat kesim • Çok amaçlı kullanım",
+        "thumbnail": "products-outdoor-tshirt/BSKLT YAKA UZUN KOL TAKTİK TİŞÖRT/BEJ/46.webp",
+        "variants": [
+            {
+                "color": "BEJ",
+                "images": [
+                    "products-outdoor-tshirt/BSKLT YAKA UZUN KOL TAKTİK TİŞÖRT/BEJ/46.webp",
+                    "products-outdoor-tshirt/BSKLT YAKA UZUN KOL TAKTİK TİŞÖRT/BEJ/47.webp",
+                    "products-outdoor-tshirt/BSKLT YAKA UZUN KOL TAKTİK TİŞÖRT/BEJ/48.webp",
+                    "products-outdoor-tshirt/BSKLT YAKA UZUN KOL TAKTİK TİŞÖRT/BEJ/49.webp",
+                    "products-outdoor-tshirt/BSKLT YAKA UZUN KOL TAKTİK TİŞÖRT/BEJ/50.webp"
+                ]
+            },
+            {
+                "color": "HAKİ",
+                "images": [
+                    "products-outdoor-tshirt/BSKLT YAKA UZUN KOL TAKTİK TİŞÖRT/HAKİ/-2024-08-02-9999-529.webp",
+                    "products-outdoor-tshirt/BSKLT YAKA UZUN KOL TAKTİK TİŞÖRT/HAKİ/-2024-08-02-9999-530.webp",
+                    "products-outdoor-tshirt/BSKLT YAKA UZUN KOL TAKTİK TİŞÖRT/HAKİ/36.webp",
+                    "products-outdoor-tshirt/BSKLT YAKA UZUN KOL TAKTİK TİŞÖRT/HAKİ/37.webp",
+                    "products-outdoor-tshirt/BSKLT YAKA UZUN KOL TAKTİK TİŞÖRT/HAKİ/38.webp"
+                ]
+            },
+            {
+                "color": "SİYAH",
+                "images": [
+                    "products-outdoor-tshirt/BSKLT YAKA UZUN KOL TAKTİK TİŞÖRT/SİYAH/41.webp",
+                    "products-outdoor-tshirt/BSKLT YAKA UZUN KOL TAKTİK TİŞÖRT/SİYAH/42.webp",
+                    "products-outdoor-tshirt/BSKLT YAKA UZUN KOL TAKTİK TİŞÖRT/SİYAH/43.webp",
+                    "products-outdoor-tshirt/BSKLT YAKA UZUN KOL TAKTİK TİŞÖRT/SİYAH/44.webp",
+                    "products-outdoor-tshirt/BSKLT YAKA UZUN KOL TAKTİK TİŞÖRT/SİYAH/45.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "POLO YAKA KISA KOL TAKTİK TİŞÖRT",
+        "category": "Outdoor T-Shirt",
+        "description": "Klasik polo yaka tasarım • Nefes alabilir kumaş • Taktik kullanıma uygun • Ter tutmaz özellik • Profesyonel görünüm",
+        "thumbnail": "products-outdoor-tshirt/POLO YAKA KISA KOL TAKTİK TİŞÖRT/BEJ/51.webp",
+        "variants": [
+            {
+                "color": "BEJ",
+                "images": [
+                    "products-outdoor-tshirt/POLO YAKA KISA KOL TAKTİK TİŞÖRT/BEJ/51.webp",
+                    "products-outdoor-tshirt/POLO YAKA KISA KOL TAKTİK TİŞÖRT/BEJ/52.webp",
+                    "products-outdoor-tshirt/POLO YAKA KISA KOL TAKTİK TİŞÖRT/BEJ/53.webp",
+                    "products-outdoor-tshirt/POLO YAKA KISA KOL TAKTİK TİŞÖRT/BEJ/54.webp",
+                    "products-outdoor-tshirt/POLO YAKA KISA KOL TAKTİK TİŞÖRT/BEJ/55.webp"
+                ]
+            },
+            {
+                "color": "HAKİ",
+                "images": [
+                    "products-outdoor-tshirt/POLO YAKA KISA KOL TAKTİK TİŞÖRT/HAKİ/61.webp",
+                    "products-outdoor-tshirt/POLO YAKA KISA KOL TAKTİK TİŞÖRT/HAKİ/62.webp",
+                    "products-outdoor-tshirt/POLO YAKA KISA KOL TAKTİK TİŞÖRT/HAKİ/63.webp",
+                    "products-outdoor-tshirt/POLO YAKA KISA KOL TAKTİK TİŞÖRT/HAKİ/64.webp",
+                    "products-outdoor-tshirt/POLO YAKA KISA KOL TAKTİK TİŞÖRT/HAKİ/65.webp"
+                ]
+            },
+            {
+                "color": "SİYAH",
+                "images": [
+                    "products-outdoor-tshirt/POLO YAKA KISA KOL TAKTİK TİŞÖRT/SİYAH/56.webp",
+                    "products-outdoor-tshirt/POLO YAKA KISA KOL TAKTİK TİŞÖRT/SİYAH/57.webp",
+                    "products-outdoor-tshirt/POLO YAKA KISA KOL TAKTİK TİŞÖRT/SİYAH/58.webp",
+                    "products-outdoor-tshirt/POLO YAKA KISA KOL TAKTİK TİŞÖRT/SİYAH/59.webp",
+                    "products-outdoor-tshirt/POLO YAKA KISA KOL TAKTİK TİŞÖRT/SİYAH/60.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "AKN 225 GÖMLEK",
+        "category": "Taktik Gömlek",
+        "description": "Rip-stop kumaş yapısı • Çift göğüs cebi • Omuz apolet detayı • Kol ayar düğmeli • Askeri standartlara uygun",
+        "thumbnail": "products-taktik-gomlek/AKN 225 GÖMLEK/ANTRASİT/32.webp",
+        "variants": [
+            {
+                "color": "ANTRASİT",
+                "images": [
+                    "products-taktik-gomlek/AKN 225 GÖMLEK/ANTRASİT/32.webp"
+                ]
+            },
+            {
+                "color": "FÜME",
+                "images": [
+                    "products-taktik-gomlek/AKN 225 GÖMLEK/FÜME/35.webp"
+                ]
+            },
+            {
+                "color": "HAKİ",
+                "images": [
+                    "products-taktik-gomlek/AKN 225 GÖMLEK/HAKİ/31.webp"
+                ]
+            },
+            {
+                "color": "SİYAH",
+                "images": [
+                    "products-taktik-gomlek/AKN 225 GÖMLEK/SİYAH/34.webp"
+                ]
+            },
+            {
+                "color": "TAŞ",
+                "images": [
+                    "products-taktik-gomlek/AKN 225 GÖMLEK/TAŞ/33.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "AVX 311 TAKTİK GÖMLEK",
+        "category": "Taktik Gömlek",
+        "description": "Taktik operasyon gömleği • Kol cep detayları • Havalandırma panelleri • Hareket özgürlüğü • Dayanıklı dikiş yapısı",
+        "thumbnail": "products-taktik-gomlek/AVX 311 TAKTİK GÖMLEK/BEJ/26.webp",
+        "variants": [
+            {
+                "color": "BEJ",
+                "images": [
+                    "products-taktik-gomlek/AVX 311 TAKTİK GÖMLEK/BEJ/26.webp",
+                    "products-taktik-gomlek/AVX 311 TAKTİK GÖMLEK/BEJ/27.webp",
+                    "products-taktik-gomlek/AVX 311 TAKTİK GÖMLEK/BEJ/28.webp",
+                    "products-taktik-gomlek/AVX 311 TAKTİK GÖMLEK/BEJ/29.webp",
+                    "products-taktik-gomlek/AVX 311 TAKTİK GÖMLEK/BEJ/30.webp"
+                ]
+            },
+            {
+                "color": "HAKİ",
+                "images": [
+                    "products-taktik-gomlek/AVX 311 TAKTİK GÖMLEK/HAKİ/16.webp",
+                    "products-taktik-gomlek/AVX 311 TAKTİK GÖMLEK/HAKİ/17.webp",
+                    "products-taktik-gomlek/AVX 311 TAKTİK GÖMLEK/HAKİ/18.webp",
+                    "products-taktik-gomlek/AVX 311 TAKTİK GÖMLEK/HAKİ/19.webp",
+                    "products-taktik-gomlek/AVX 311 TAKTİK GÖMLEK/HAKİ/20.webp"
+                ]
+            },
+            {
+                "color": "SİYAH",
+                "images": [
+                    "products-taktik-gomlek/AVX 311 TAKTİK GÖMLEK/SİYAH/21.webp",
+                    "products-taktik-gomlek/AVX 311 TAKTİK GÖMLEK/SİYAH/22.webp",
+                    "products-taktik-gomlek/AVX 311 TAKTİK GÖMLEK/SİYAH/23.webp",
+                    "products-taktik-gomlek/AVX 311 TAKTİK GÖMLEK/SİYAH/24.webp",
+                    "products-taktik-gomlek/AVX 311 TAKTİK GÖMLEK/SİYAH/25.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "AVX 312 TAKTİK GÖMLEK",
+        "category": "Taktik Gömlek",
+        "description": "Gelişmiş taktik tasarım • Çoklu cep sistemi • YKK fermuar kullanımı • UV koruması • Kırışmaz kumaş özelliği",
+        "thumbnail": "products-taktik-gomlek/AVX 312 TAKTİK GÖMLEK/BEJ/11.webp",
+        "variants": [
+            {
+                "color": "BEJ",
+                "images": [
+                    "products-taktik-gomlek/AVX 312 TAKTİK GÖMLEK/BEJ/11.webp",
+                    "products-taktik-gomlek/AVX 312 TAKTİK GÖMLEK/BEJ/12.webp",
+                    "products-taktik-gomlek/AVX 312 TAKTİK GÖMLEK/BEJ/13.webp",
+                    "products-taktik-gomlek/AVX 312 TAKTİK GÖMLEK/BEJ/14.webp",
+                    "products-taktik-gomlek/AVX 312 TAKTİK GÖMLEK/BEJ/15.webp"
+                ]
+            },
+            {
+                "color": "HAKİ",
+                "images": [
+                    "products-taktik-gomlek/AVX 312 TAKTİK GÖMLEK/HAKİ/1.webp",
+                    "products-taktik-gomlek/AVX 312 TAKTİK GÖMLEK/HAKİ/2.webp",
+                    "products-taktik-gomlek/AVX 312 TAKTİK GÖMLEK/HAKİ/3.webp",
+                    "products-taktik-gomlek/AVX 312 TAKTİK GÖMLEK/HAKİ/4.webp",
+                    "products-taktik-gomlek/AVX 312 TAKTİK GÖMLEK/HAKİ/5.webp"
+                ]
+            },
+            {
+                "color": "SİYAH",
+                "images": [
+                    "products-taktik-gomlek/AVX 312 TAKTİK GÖMLEK/SİYAH/10.webp",
+                    "products-taktik-gomlek/AVX 312 TAKTİK GÖMLEK/SİYAH/6.webp",
+                    "products-taktik-gomlek/AVX 312 TAKTİK GÖMLEK/SİYAH/7.webp",
+                    "products-taktik-gomlek/AVX 312 TAKTİK GÖMLEK/SİYAH/8.webp",
+                    "products-taktik-gomlek/AVX 312 TAKTİK GÖMLEK/SİYAH/9.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "LOWA ZEPHYR MK2 Gtx ASKERİ BOT",
+        "category": "Taktik Bot",
+        "description": "Gore-Tex su geçirmez teknoloji • Vibram taban • Hızlı bağcık sistemi • Askeri standartlar • Tüm arazi performansı",
+        "thumbnail": "products-taktik-bot/LOWA ZEPHYR MK2 Gtx ASKERİ BOT/169.webp",
+        "variants": [
+            {
+                "color": "STANDART",
+                "images": [
+                    "products-taktik-bot/LOWA ZEPHYR MK2 Gtx ASKERİ BOT/169.webp",
+                    "products-taktik-bot/LOWA ZEPHYR MK2 Gtx ASKERİ BOT/170.webp",
+                    "products-taktik-bot/LOWA ZEPHYR MK2 Gtx ASKERİ BOT/171.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "VOGEL 1490",
+        "category": "Taktik Bot",
+        "description": "Deri ve tekstil kombinasyonu • Özel taban teknolojisi • Bileklik desteği • Hızlı kuruma özelliği • Zorlu koşullara uygun",
+        "thumbnail": "products-taktik-bot/VOGEL 1490/BEJ/210.webp",
+        "variants": [
+            {
+                "color": "BEJ",
+                "images": [
+                    "products-taktik-bot/VOGEL 1490/BEJ/210.webp",
+                    "products-taktik-bot/VOGEL 1490/BEJ/211.webp",
+                    "products-taktik-bot/VOGEL 1490/BEJ/212.webp",
+                    "products-taktik-bot/VOGEL 1490/BEJ/213.webp",
+                    "products-taktik-bot/VOGEL 1490/BEJ/214.webp"
+                ]
+            },
+            {
+                "color": "HAKİ",
+                "images": [
+                    "products-taktik-bot/VOGEL 1490/HAKİ/205.webp",
+                    "products-taktik-bot/VOGEL 1490/HAKİ/206.webp",
+                    "products-taktik-bot/VOGEL 1490/HAKİ/207.webp",
+                    "products-taktik-bot/VOGEL 1490/HAKİ/208.webp",
+                    "products-taktik-bot/VOGEL 1490/HAKİ/209.webp"
+                ]
+            },
+            {
+                "color": "SİYAH ",
+                "images": [
+                    "products-taktik-bot/VOGEL 1490/SİYAH /200.webp",
+                    "products-taktik-bot/VOGEL 1490/SİYAH /201.webp",
+                    "products-taktik-bot/VOGEL 1490/SİYAH /202.webp",
+                    "products-taktik-bot/VOGEL 1490/SİYAH /203.webp",
+                    "products-taktik-bot/VOGEL 1490/SİYAH /204.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "VOGEL 1491 FERMUARLI OUTDOOR BOT",
+        "category": "Taktik Bot",
+        "description": "Yan fermuar sistemi • Hızlı giyim özelliği • Anti-slip taban • Darbe emici taban ara katmanı • Outdoor aktivitelere uygun",
+        "thumbnail": "products-taktik-bot/VOGEL 1491 FERMUARLI OUTDOOR BOT/BEJ/225.webp",
+        "variants": [
+            {
+                "color": "BEJ",
+                "images": [
+                    "products-taktik-bot/VOGEL 1491 FERMUARLI OUTDOOR BOT/BEJ/225.webp",
+                    "products-taktik-bot/VOGEL 1491 FERMUARLI OUTDOOR BOT/BEJ/226.webp",
+                    "products-taktik-bot/VOGEL 1491 FERMUARLI OUTDOOR BOT/BEJ/227.webp",
+                    "products-taktik-bot/VOGEL 1491 FERMUARLI OUTDOOR BOT/BEJ/228.webp",
+                    "products-taktik-bot/VOGEL 1491 FERMUARLI OUTDOOR BOT/BEJ/229.webp"
+                ]
+            },
+            {
+                "color": "HAKİ",
+                "images": [
+                    "products-taktik-bot/VOGEL 1491 FERMUARLI OUTDOOR BOT/HAKİ/220.webp",
+                    "products-taktik-bot/VOGEL 1491 FERMUARLI OUTDOOR BOT/HAKİ/221.webp",
+                    "products-taktik-bot/VOGEL 1491 FERMUARLI OUTDOOR BOT/HAKİ/222.webp",
+                    "products-taktik-bot/VOGEL 1491 FERMUARLI OUTDOOR BOT/HAKİ/223.webp",
+                    "products-taktik-bot/VOGEL 1491 FERMUARLI OUTDOOR BOT/HAKİ/224.webp"
+                ]
+            },
+            {
+                "color": "SİYAH",
+                "images": [
+                    "products-taktik-bot/VOGEL 1491 FERMUARLI OUTDOOR BOT/SİYAH/215.webp",
+                    "products-taktik-bot/VOGEL 1491 FERMUARLI OUTDOOR BOT/SİYAH/216.webp",
+                    "products-taktik-bot/VOGEL 1491 FERMUARLI OUTDOOR BOT/SİYAH/217.webp",
+                    "products-taktik-bot/VOGEL 1491 FERMUARLI OUTDOOR BOT/SİYAH/218.webp",
+                    "products-taktik-bot/VOGEL 1491 FERMUARLI OUTDOOR BOT/SİYAH/219.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "VOGEL 1492",
+        "category": "Taktik Bot",
+        "description": "Yüksek konç tasarımı • Güçlendirilmiş burun ve topuk • Nem yönetim sistemi • Ekstra dayanıklılık • Profesyonel kullanım",
+        "thumbnail": "products-taktik-bot/VOGEL 1492 /BEJ/195.webp",
+        "variants": [
+            {
+                "color": "BEJ",
+                "images": [
+                    "products-taktik-bot/VOGEL 1492 /BEJ/195.webp",
+                    "products-taktik-bot/VOGEL 1492 /BEJ/196.webp",
+                    "products-taktik-bot/VOGEL 1492 /BEJ/197.webp",
+                    "products-taktik-bot/VOGEL 1492 /BEJ/198.webp",
+                    "products-taktik-bot/VOGEL 1492 /BEJ/199.webp"
+                ]
+            },
+            {
+                "color": "HAKİ",
+                "images": [
+                    "products-taktik-bot/VOGEL 1492 /HAKİ/190.webp",
+                    "products-taktik-bot/VOGEL 1492 /HAKİ/191.webp",
+                    "products-taktik-bot/VOGEL 1492 /HAKİ/192.webp",
+                    "products-taktik-bot/VOGEL 1492 /HAKİ/193.webp",
+                    "products-taktik-bot/VOGEL 1492 /HAKİ/194.webp"
+                ]
+            },
+            {
+                "color": "SİYAH",
+                "images": [
+                    "products-taktik-bot/VOGEL 1492 /SİYAH/185.webp",
+                    "products-taktik-bot/VOGEL 1492 /SİYAH/186.webp",
+                    "products-taktik-bot/VOGEL 1492 /SİYAH/187.webp",
+                    "products-taktik-bot/VOGEL 1492 /SİYAH/188.webp",
+                    "products-taktik-bot/VOGEL 1492 /SİYAH/189.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "VOGEL GUARD RS",
+        "category": "Taktik Bot",
+        "description": "Güvenlik bot standardı • Çelik burun koruması • Yağ ve asit dayanımı • Kaymaz taban yapısı • Endüstriyel kullanım",
+        "thumbnail": "products-taktik-bot/VOGEL GUARD RS /BEJ/180.webp",
+        "variants": [
+            {
+                "color": "BEJ",
+                "images": [
+                    "products-taktik-bot/VOGEL GUARD RS /BEJ/180.webp",
+                    "products-taktik-bot/VOGEL GUARD RS /BEJ/181.webp",
+                    "products-taktik-bot/VOGEL GUARD RS /BEJ/182.webp",
+                    "products-taktik-bot/VOGEL GUARD RS /BEJ/183.webp",
+                    "products-taktik-bot/VOGEL GUARD RS /BEJ/184.webp"
+                ]
+            },
+            {
+                "color": "SİYAH",
+                "images": [
+                    "products-taktik-bot/VOGEL GUARD RS /SİYAH/177.webp",
+                    "products-taktik-bot/VOGEL GUARD RS /SİYAH/178.webp",
+                    "products-taktik-bot/VOGEL GUARD RS /SİYAH/179.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "VOGEL STARK COYOTE TAKTİK BOT",
+        "category": "Taktik Bot",
+        "description": "Coyote renk kodlu • Taktik operasyon botu • Yüksek performans taban • Çöl ve kuru iklim uyumu • Uzun süreli konfor",
+        "thumbnail": "products-taktik-bot/VOGEL STARK COYOTE TAKTİK BOT/172.webp",
+        "variants": [
+            {
+                "color": "STANDART",
+                "images": [
+                    "products-taktik-bot/VOGEL STARK COYOTE TAKTİK BOT/172.webp",
+                    "products-taktik-bot/VOGEL STARK COYOTE TAKTİK BOT/173.webp",
+                    "products-taktik-bot/VOGEL STARK COYOTE TAKTİK BOT/174.webp",
+                    "products-taktik-bot/VOGEL STARK COYOTE TAKTİK BOT/175.webp",
+                    "products-taktik-bot/VOGEL STARK COYOTE TAKTİK BOT/176.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "AKN 112 TAKTİK PANTOLON",
+        "category": "Taktik Pantolon",
+        "description": "Taktik kullanıma uygun tasarım • Güçlendirilmiş diz bölgeleri • Çoklu cep sistemi • Esnek kumaş yapısı • Askeri standartlar",
+        "thumbnail": "products-taktik-pantolon/AKN 112 TAKTİK PANTOLON/111.webp",
+        "variants": [
+            {
+                "color": "STANDART",
+                "images": [
+                    "products-taktik-pantolon/AKN 112 TAKTİK PANTOLON/111.webp",
+                    "products-taktik-pantolon/AKN 112 TAKTİK PANTOLON/112.webp",
+                    "products-taktik-pantolon/AKN 112 TAKTİK PANTOLON/113.webp",
+                    "products-taktik-pantolon/AKN 112 TAKTİK PANTOLON/114.webp",
+                    "products-taktik-pantolon/AKN 112 TAKTİK PANTOLON/115.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "AKN 162 JANDARMA SOFTSHELL PANTOLON",
+        "category": "Taktik Pantolon",
+        "description": "Softshell kumaş teknolojisi • Su itici ve rüzgar geçirmez • Jandarma birlik özelliği • Kış koşullarına uygun • Hareket konforu",
+        "thumbnail": "products-taktik-pantolon/AKN 162 JANDARMA SOFTSHELL PANTOLON/82.webp",
+        "variants": [
+            {
+                "color": "STANDART",
+                "images": [
+                    "products-taktik-pantolon/AKN 162 JANDARMA SOFTSHELL PANTOLON/82.webp",
+                    "products-taktik-pantolon/AKN 162 JANDARMA SOFTSHELL PANTOLON/83.webp",
+                    "products-taktik-pantolon/AKN 162 JANDARMA SOFTSHELL PANTOLON/84.webp",
+                    "products-taktik-pantolon/AKN 162 JANDARMA SOFTSHELL PANTOLON/85.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "AKN 162 TAKTİK PANTOLON SOFTSHELL",
+        "category": "Taktik Pantolon",
+        "description": "Softshell kumaş • Nefes alabilir yapı • Dört mevsim kullanım • Su ve rüzgar dayanımı • Profesyonel taktik pantolon",
+        "thumbnail": "products-taktik-pantolon/AKN 162 TAKTİK PANTOLON SOFTSHELL/86.webp",
+        "variants": [
+            {
+                "color": "STANDART",
+                "images": [
+                    "products-taktik-pantolon/AKN 162 TAKTİK PANTOLON SOFTSHELL/86.webp",
+                    "products-taktik-pantolon/AKN 162 TAKTİK PANTOLON SOFTSHELL/87.webp",
+                    "products-taktik-pantolon/AKN 162 TAKTİK PANTOLON SOFTSHELL/88.webp",
+                    "products-taktik-pantolon/AKN 162 TAKTİK PANTOLON SOFTSHELL/89.webp",
+                    "products-taktik-pantolon/AKN 162 TAKTİK PANTOLON SOFTSHELL/90.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "AKN 513 TAKTİK PANTOLON",
+        "category": "Taktik Pantolon",
+        "description": "Modern taktik tasarım • Anti-bakteriyel kumaş • Hızlı kuruma özelliği • Operasyon tipi cep düzenlemesi • Yüksek dayanıklılık",
+        "thumbnail": "products-taktik-pantolon/AKN 513 TAKTİK PANTOLON/106.webp",
+        "variants": [
+            {
+                "color": "STANDART",
+                "images": [
+                    "products-taktik-pantolon/AKN 513 TAKTİK PANTOLON/106.webp",
+                    "products-taktik-pantolon/AKN 513 TAKTİK PANTOLON/107.webp",
+                    "products-taktik-pantolon/AKN 513 TAKTİK PANTOLON/108.webp",
+                    "products-taktik-pantolon/AKN 513 TAKTİK PANTOLON/109.webp",
+                    "products-taktik-pantolon/AKN 513 TAKTİK PANTOLON/110.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "AKN 514 TAKTİK PANTOLON",
+        "category": "Taktik Pantolon",
+        "description": "Gelişmiş taktik model • Diz koruyucu uyumlu • Ayarlanabilir bel yapısı • UV koruma özelliği • Askeri operasyon standardı",
+        "thumbnail": "products-taktik-pantolon/AKN 514 TAKTİK PANTOLON/101.webp",
+        "variants": [
+            {
+                "color": "STANDART",
+                "images": [
+                    "products-taktik-pantolon/AKN 514 TAKTİK PANTOLON/101.webp",
+                    "products-taktik-pantolon/AKN 514 TAKTİK PANTOLON/102.webp",
+                    "products-taktik-pantolon/AKN 514 TAKTİK PANTOLON/103.webp",
+                    "products-taktik-pantolon/AKN 514 TAKTİK PANTOLON/104.webp",
+                    "products-taktik-pantolon/AKN 514 TAKTİK PANTOLON/105.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "AKN 516 TAKTİK PANTOLON",
+        "category": "Taktik Pantolon",
+        "description": "Yüksek performans kumaşı • Ergonomik kesim • Taktik cep yerleşimi • Kırışmazlık özelliği • Günlük ve operasyonel kullanım",
+        "thumbnail": "products-taktik-pantolon/AKN 516 TAKTİK PANTOLON/91.webp",
+        "variants": [
+            {
+                "color": "STANDART",
+                "images": [
+                    "products-taktik-pantolon/AKN 516 TAKTİK PANTOLON/91.webp",
+                    "products-taktik-pantolon/AKN 516 TAKTİK PANTOLON/92.webp",
+                    "products-taktik-pantolon/AKN 516 TAKTİK PANTOLON/93.webp",
+                    "products-taktik-pantolon/AKN 516 TAKTİK PANTOLON/94.webp",
+                    "products-taktik-pantolon/AKN 516 TAKTİK PANTOLON/95.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "AKN515 TAKTİK PANTOLON",
+        "category": "Taktik Pantolon",
+        "description": "Son model taktik pantolon • Rip-stop kumaş yapısı • Güçlendirilmiş kesiş noktaları • Su geçirmez fermuar detayları • Çok yönlü kullanım",
+        "thumbnail": "products-taktik-pantolon/AKN515 TAKTİK PANTOLON/100.webp",
+        "variants": [
+            {
+                "color": "STANDART",
+                "images": [
+                    "products-taktik-pantolon/AKN515 TAKTİK PANTOLON/100.webp",
+                    "products-taktik-pantolon/AKN515 TAKTİK PANTOLON/96.webp",
+                    "products-taktik-pantolon/AKN515 TAKTİK PANTOLON/97.webp",
+                    "products-taktik-pantolon/AKN515 TAKTİK PANTOLON/98.webp",
+                    "products-taktik-pantolon/AKN515 TAKTİK PANTOLON/99.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "AKN AOUTDOOR 45 LT ÇANTA",
+        "category": "Teçhizat \u0026 Aksesuar",
+        "description": "45 litre hacim • Su geçirmez kumaş • Ergonomik sırt sistemi • Çoklu bölme organizasyonu • Molle bağlantı sistemi",
+        "thumbnail": "products-techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/HAKİ/306.webp",
+        "variants": [
+            {
+                "color": "HAKİ",
+                "images": [
+                    "products-techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/HAKİ/306.webp",
+                    "products-techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/HAKİ/307.webp",
+                    "products-techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/HAKİ/308.webp",
+                    "products-techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/HAKİ/309.webp",
+                    "products-techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/HAKİ/310.webp"
+                ]
+            },
+            {
+                "color": "JANDARMA",
+                "images": [
+                    "products-techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/JANDARMA/311.webp",
+                    "products-techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/JANDARMA/312.webp",
+                    "products-techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/JANDARMA/313.webp",
+                    "products-techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/JANDARMA/314.webp",
+                    "products-techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/JANDARMA/315.webp"
+                ]
+            },
+            {
+                "color": "SİYAH",
+                "images": [
+                    "products-techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/SİYAH/301.webp",
+                    "products-techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/SİYAH/302.webp",
+                    "products-techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/SİYAH/303.webp",
+                    "products-techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/SİYAH/304.webp",
+                    "products-techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/SİYAH/305.webp"
+                ]
+            },
+            {
+                "color": "TSK",
+                "images": [
+                    "products-techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/TSK/296.webp",
+                    "products-techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/TSK/297.webp",
+                    "products-techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/TSK/298.webp",
+                    "products-techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/TSK/299.webp",
+                    "products-techizat-aksesuar/AKN AOUTDOOR 45 LT ÇANTA/TSK/300.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "AKN BALİSTİK PLAKA TAŞIYICI HÜCUM YELEĞİ TSK",
+        "category": "Teçhizat \u0026 Aksesuar",
+        "description": "Balistik plaka uyumlu • Hücüm yeleği tasarımı • TSK standardı • Hızlı söküm sistemi • Ayarlanabilir boyut",
+        "thumbnail": "products-techizat-aksesuar/AKN BALİSTİK PLAKA TAŞIYICI HÜCUM YELEĞİ TSK/256.webp",
+        "variants": [
+            {
+                "color": "STANDART",
+                "images": [
+                    "products-techizat-aksesuar/AKN BALİSTİK PLAKA TAŞIYICI HÜCUM YELEĞİ TSK/256.webp",
+                    "products-techizat-aksesuar/AKN BALİSTİK PLAKA TAŞIYICI HÜCUM YELEĞİ TSK/257.webp",
+                    "products-techizat-aksesuar/AKN BALİSTİK PLAKA TAŞIYICI HÜCUM YELEĞİ TSK/258.webp",
+                    "products-techizat-aksesuar/AKN BALİSTİK PLAKA TAŞIYICI HÜCUM YELEĞİ TSK/259.webp",
+                    "products-techizat-aksesuar/AKN BALİSTİK PLAKA TAŞIYICI HÜCUM YELEĞİ TSK/260.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "AKN BALİSTİK PLAKA TAŞIYICI HÜCÜM YELEĞİ",
+        "category": "Teçhizat \u0026 Aksesuar",
+        "description": "Taktik hücüm yeleği • Balistik plaka cebi • Molle bağlantı noktaları • Havalandırma sistemi • Operasyonel kullanım",
+        "thumbnail": "products-techizat-aksesuar/AKN BALİSTİK PLAKA TAŞIYICI HÜCÜM YELEĞİ/261.webp",
+        "variants": [
+            {
+                "color": "STANDART",
+                "images": [
+                    "products-techizat-aksesuar/AKN BALİSTİK PLAKA TAŞIYICI HÜCÜM YELEĞİ/261.webp",
+                    "products-techizat-aksesuar/AKN BALİSTİK PLAKA TAŞIYICI HÜCÜM YELEĞİ/262.webp",
+                    "products-techizat-aksesuar/AKN BALİSTİK PLAKA TAŞIYICI HÜCÜM YELEĞİ/263.webp",
+                    "products-techizat-aksesuar/AKN BALİSTİK PLAKA TAŞIYICI HÜCÜM YELEĞİ/264.webp",
+                    "products-techizat-aksesuar/AKN BALİSTİK PLAKA TAŞIYICI HÜCÜM YELEĞİ/265.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "AKN EŞOFMAN TAKIMI",
+        "category": "Teçhizat \u0026 Aksesuar",
+        "description": "Spor ve günlük kullanım • Pamuklu esnek kumaş • Fermuarlı cep detayları • Rahat kesim • Yıkanabilir kalite",
+        "thumbnail": "products-techizat-aksesuar/AKN EŞOFMAN TAKIMI /FÜME/241.webp",
+        "variants": [
+            {
+                "color": "FÜME",
+                "images": [
+                    "products-techizat-aksesuar/AKN EŞOFMAN TAKIMI /FÜME/241.webp",
+                    "products-techizat-aksesuar/AKN EŞOFMAN TAKIMI /FÜME/242.webp",
+                    "products-techizat-aksesuar/AKN EŞOFMAN TAKIMI /FÜME/243.webp",
+                    "products-techizat-aksesuar/AKN EŞOFMAN TAKIMI /FÜME/244.webp",
+                    "products-techizat-aksesuar/AKN EŞOFMAN TAKIMI /FÜME/245.webp"
+                ]
+            },
+            {
+                "color": "LACİVERT",
+                "images": [
+                    "products-techizat-aksesuar/AKN EŞOFMAN TAKIMI /LACİVERT/236.webp",
+                    "products-techizat-aksesuar/AKN EŞOFMAN TAKIMI /LACİVERT/237.webp",
+                    "products-techizat-aksesuar/AKN EŞOFMAN TAKIMI /LACİVERT/238.webp",
+                    "products-techizat-aksesuar/AKN EŞOFMAN TAKIMI /LACİVERT/239.webp",
+                    "products-techizat-aksesuar/AKN EŞOFMAN TAKIMI /LACİVERT/240.webp"
+                ]
+            },
+            {
+                "color": "SİYAH",
+                "images": [
+                    "products-techizat-aksesuar/AKN EŞOFMAN TAKIMI /SİYAH/231.webp",
+                    "products-techizat-aksesuar/AKN EŞOFMAN TAKIMI /SİYAH/232.webp",
+                    "products-techizat-aksesuar/AKN EŞOFMAN TAKIMI /SİYAH/233.webp",
+                    "products-techizat-aksesuar/AKN EŞOFMAN TAKIMI /SİYAH/234.webp",
+                    "products-techizat-aksesuar/AKN EŞOFMAN TAKIMI /SİYAH/235.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "AKN OPERASYON KOMBAT JANDARMA",
+        "category": "Teçhizat \u0026 Aksesuar",
+        "description": "Jandarma operasyon kombı • Rip-stop kumaş • Kamufle özellik • Komando tipi kesim • Özel kuvvet kullanımı",
+        "thumbnail": "products-techizat-aksesuar/AKN OPERASYON KOMBAT JANDARMA/246.webp",
+        "variants": [
+            {
+                "color": "STANDART",
+                "images": [
+                    "products-techizat-aksesuar/AKN OPERASYON KOMBAT JANDARMA/246.webp",
+                    "products-techizat-aksesuar/AKN OPERASYON KOMBAT JANDARMA/247.webp",
+                    "products-techizat-aksesuar/AKN OPERASYON KOMBAT JANDARMA/248.webp",
+                    "products-techizat-aksesuar/AKN OPERASYON KOMBAT JANDARMA/249.webp",
+                    "products-techizat-aksesuar/AKN OPERASYON KOMBAT JANDARMA/250.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "AKN OPERASYON PANTOLONU - JANDARMA",
+        "category": "Teçhizat \u0026 Aksesuar",
+        "description": "Jandarma operasyon pantolonu • Taktik cep düzenlemesi • Diz koruyucu uyumlu • Esnek kumaş yapısı • Kamufle desen",
+        "thumbnail": "products-techizat-aksesuar/AKN OPERASYON PANTOLONU - JANDARMA/251.webp",
+        "variants": [
+            {
+                "color": "STANDART",
+                "images": [
+                    "products-techizat-aksesuar/AKN OPERASYON PANTOLONU - JANDARMA/251.webp",
+                    "products-techizat-aksesuar/AKN OPERASYON PANTOLONU - JANDARMA/252.webp",
+                    "products-techizat-aksesuar/AKN OPERASYON PANTOLONU - JANDARMA/253.webp",
+                    "products-techizat-aksesuar/AKN OPERASYON PANTOLONU - JANDARMA/254.webp",
+                    "products-techizat-aksesuar/AKN OPERASYON PANTOLONU - JANDARMA/img-20250531-wa0144.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "DİZLİK DİRSEKLİK KORUMA SETİ ASKERİ YEŞİL",
+        "category": "Teçhizat \u0026 Aksesuar",
+        "description": "Taktik koruma seti • EVA koruma pedi • Ayarlanabilir kayışlar • Anti-kayma yapısı • Askeri yeşil renk",
+        "thumbnail": "products-techizat-aksesuar/DİZLİK DİRSEKLİK KORUMA SETİ ASKERİ YEŞİL/230.webp",
+        "variants": [
+            {
+                "color": "STANDART",
+                "images": [
+                    "products-techizat-aksesuar/DİZLİK DİRSEKLİK KORUMA SETİ ASKERİ YEŞİL/230.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "JANDARMA ASAYİŞ TAKIMI YAZLIK",
+        "category": "Teçhizat \u0026 Aksesuar",
+        "description": "Jandarma asayiş üniforması • Yazlık kumaş • Nefes alabilir yapı • Resmi kıyafet standardı • Taktık ve polis hırkası",
+        "thumbnail": "products-techizat-aksesuar/JANDARMA ASAYİŞ TAKIMI YAZLIK/316.webp",
+        "variants": [
+            {
+                "color": "STANDART",
+                "images": [
+                    "products-techizat-aksesuar/JANDARMA ASAYİŞ TAKIMI YAZLIK/316.webp",
+                    "products-techizat-aksesuar/JANDARMA ASAYİŞ TAKIMI YAZLIK/317.webp",
+                    "products-techizat-aksesuar/JANDARMA ASAYİŞ TAKIMI YAZLIK/318.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "TABANCA GÖZLÜK TAKTİK ÜÇGEN ÇANTA",
+        "category": "Teçhizat \u0026 Aksesuar",
+        "description": "Taktik omuz çantası • Tabanca bölmesi • Gözlük ve aksesuar cebi • Ayarlanabilir askı • Su geçirmez kumaş",
+        "thumbnail": "products-techizat-aksesuar/TABANCA GÖZLÜK TAKTİK ÜÇGEN ÇANTA/BEJ/276.webp",
+        "variants": [
+            {
+                "color": "BEJ",
+                "images": [
+                    "products-techizat-aksesuar/TABANCA GÖZLÜK TAKTİK ÜÇGEN ÇANTA/BEJ/276.webp",
+                    "products-techizat-aksesuar/TABANCA GÖZLÜK TAKTİK ÜÇGEN ÇANTA/BEJ/277.webp",
+                    "products-techizat-aksesuar/TABANCA GÖZLÜK TAKTİK ÜÇGEN ÇANTA/BEJ/278.webp",
+                    "products-techizat-aksesuar/TABANCA GÖZLÜK TAKTİK ÜÇGEN ÇANTA/BEJ/279.webp",
+                    "products-techizat-aksesuar/TABANCA GÖZLÜK TAKTİK ÜÇGEN ÇANTA/BEJ/280.webp"
+                ]
+            },
+            {
+                "color": "HAKİ",
+                "images": [
+                    "products-techizat-aksesuar/TABANCA GÖZLÜK TAKTİK ÜÇGEN ÇANTA/HAKİ/271.webp",
+                    "products-techizat-aksesuar/TABANCA GÖZLÜK TAKTİK ÜÇGEN ÇANTA/HAKİ/272.webp",
+                    "products-techizat-aksesuar/TABANCA GÖZLÜK TAKTİK ÜÇGEN ÇANTA/HAKİ/273.webp",
+                    "products-techizat-aksesuar/TABANCA GÖZLÜK TAKTİK ÜÇGEN ÇANTA/HAKİ/274.webp",
+                    "products-techizat-aksesuar/TABANCA GÖZLÜK TAKTİK ÜÇGEN ÇANTA/HAKİ/275.webp"
+                ]
+            },
+            {
+                "color": "SİYAH",
+                "images": [
+                    "products-techizat-aksesuar/TABANCA GÖZLÜK TAKTİK ÜÇGEN ÇANTA/SİYAH/266.webp",
+                    "products-techizat-aksesuar/TABANCA GÖZLÜK TAKTİK ÜÇGEN ÇANTA/SİYAH/267.webp",
+                    "products-techizat-aksesuar/TABANCA GÖZLÜK TAKTİK ÜÇGEN ÇANTA/SİYAH/268.webp",
+                    "products-techizat-aksesuar/TABANCA GÖZLÜK TAKTİK ÜÇGEN ÇANTA/SİYAH/269.webp",
+                    "products-techizat-aksesuar/TABANCA GÖZLÜK TAKTİK ÜÇGEN ÇANTA/SİYAH/270.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "TABANCA TAŞIMA GÖZLÜ KARE",
+        "category": "Teçhizat \u0026 Aksesuar",
+        "description": "Kare tabanca kılıfı • Çoklu taşıma seçeneği • Molle bağlantı uyumlu • Hızlı erişim sistemi • Yüksek dayanıklılık",
+        "thumbnail": "products-techizat-aksesuar/TABANCA TAŞIMA GÖZLÜ KARE /BEJ/291.webp",
+        "variants": [
+            {
+                "color": "BEJ",
+                "images": [
+                    "products-techizat-aksesuar/TABANCA TAŞIMA GÖZLÜ KARE /BEJ/291.webp",
+                    "products-techizat-aksesuar/TABANCA TAŞIMA GÖZLÜ KARE /BEJ/292.webp",
+                    "products-techizat-aksesuar/TABANCA TAŞIMA GÖZLÜ KARE /BEJ/293.webp",
+                    "products-techizat-aksesuar/TABANCA TAŞIMA GÖZLÜ KARE /BEJ/294.webp",
+                    "products-techizat-aksesuar/TABANCA TAŞIMA GÖZLÜ KARE /BEJ/295.webp"
+                ]
+            },
+            {
+                "color": "HAKİ",
+                "images": [
+                    "products-techizat-aksesuar/TABANCA TAŞIMA GÖZLÜ KARE /HAKİ/286.webp",
+                    "products-techizat-aksesuar/TABANCA TAŞIMA GÖZLÜ KARE /HAKİ/287.webp",
+                    "products-techizat-aksesuar/TABANCA TAŞIMA GÖZLÜ KARE /HAKİ/288.webp",
+                    "products-techizat-aksesuar/TABANCA TAŞIMA GÖZLÜ KARE /HAKİ/289.webp",
+                    "products-techizat-aksesuar/TABANCA TAŞIMA GÖZLÜ KARE /HAKİ/290.webp"
+                ]
+            },
+            {
+                "color": "SİYAH",
+                "images": [
+                    "products-techizat-aksesuar/TABANCA TAŞIMA GÖZLÜ KARE /SİYAH/281.webp",
+                    "products-techizat-aksesuar/TABANCA TAŞIMA GÖZLÜ KARE /SİYAH/282.webp",
+                    "products-techizat-aksesuar/TABANCA TAŞIMA GÖZLÜ KARE /SİYAH/283.webp",
+                    "products-techizat-aksesuar/TABANCA TAŞIMA GÖZLÜ KARE /SİYAH/284.webp",
+                    "products-techizat-aksesuar/TABANCA TAŞIMA GÖZLÜ KARE /SİYAH/285.webp"
+                ]
+            }
+        ]
+    }
+];
+
+// Ürün verilerini global olarak kullanılabilir hale getir
+window.PRODUCTS_DATA = PRODUCTS_DATA;
