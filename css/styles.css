@@ -411,9 +411,10 @@ body {
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 24px;
     align-items: stretch;
+    padding: 20px 0;
 }
 
 .footer {
@@ -461,10 +462,13 @@ body {
     border: 1px solid rgba(232, 69, 69, 0.2);
     width: 90%;
     max-width: 1200px;
+    max-height: 90vh;
+    overflow-y: auto;
     border-radius: 20px;
     transform: scale(0.8) translateY(-30px);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 25px 60px rgba(0,0,0,0.8), 0 0 100px rgba(232, 69, 69, 0.1);
+    position: relative;
 }
 
 .modal.show .modal-content {
@@ -508,6 +512,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    min-height: 350px;
 }
 
 .product-item:hover {
@@ -518,10 +523,11 @@ body {
 .product-thumb {
     width: 100%;
     height: 280px;
-    object-fit: contain;
+    object-fit: cover;
     transition: all 0.3s ease;
     background-color: #f5f5f5;
     position: relative;
+    display: block;
 }
 
 .product-item:hover .product-thumb {
@@ -605,8 +611,10 @@ body {
     display: flex;
     gap: 12px;
     overflow-x: auto;
-    padding: 5px 0;
+    padding: 10px 0;
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
 }
 
 .thumbnail {
@@ -702,6 +710,7 @@ body {
 .color-dot.tsk { background-color: #2D4A2B; }
 
 /* Responsive Tasarım */
+/* Tablet ve küçük ekranlar */
 @media (max-width: 768px) {
     .header-top {
         flex-direction: column;
@@ -759,8 +768,9 @@ body {
     }
     
     .products-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
         gap: 16px;
+        padding: 10px;
     }
     
     .product-thumb {
@@ -833,7 +843,8 @@ body {
 
 /* Lazy Loading Skeleton */
 .product-thumb.loading,
-.main-image img.loading {
+.main-image img.loading,
+.thumbnail.loading {
     background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
     background-size: 200% 100%;
     animation: skeleton 1.5s infinite;
