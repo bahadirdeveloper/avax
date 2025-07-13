@@ -3,6 +3,12 @@
 // Global ürün dizisi
 let allProducts = [];
 
+// URL encoding için yardımcı fonksiyon
+function fixImagePath(path) {
+    // Türkçe karakterleri ve boşlukları düzgün encode et
+    return path.split('/').map(segment => encodeURIComponent(segment)).join('/');
+}
+
 // Kategori eşleştirme haritası
 const categoryMap = {
     'Taktik Gömlek': 'taktik-gomlek',
@@ -62,7 +68,7 @@ function renderProducts(products) {
             this.classList.remove('loading');
         };
         
-        imgElement.src = product.thumbnail;
+        imgElement.src = fixImagePath(product.thumbnail);
         
         productElement.innerHTML = `
             <div class="product-info">
@@ -122,7 +128,7 @@ function showProductModal(product) {
     // Ana resmi güncelle
     const mainImageSrc = product.thumbnail || (product.variants && product.variants[0] && product.variants[0].images[0]);
     modalMainImage.classList.add('loading');
-    modalMainImage.src = mainImageSrc;
+    modalMainImage.src = fixImagePath(mainImageSrc);
     modalMainImage.alt = product.name;
     
     // Ana görsel hata yönetimi
@@ -143,12 +149,12 @@ function showProductModal(product) {
             firstVariant.images.forEach((image, index) => {
                 const thumbnail = document.createElement('img');
                 thumbnail.classList.add('thumbnail');
-                thumbnail.src = image;
+                thumbnail.src = fixImagePath(image);
                 thumbnail.alt = `${product.name} - ${index + 1}`;
                 if (index === 0) thumbnail.classList.add('active');
                 
                 thumbnail.onclick = () => {
-                    modalMainImage.src = image;
+                    modalMainImage.src = fixImagePath(image);
                     // Aktif thumbnail'ı güncelle
                     imageThumbnails.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
                     thumbnail.classList.add('active');
@@ -176,19 +182,19 @@ function showProductModal(product) {
             colorDot.onclick = () => {
                 // Ana resmi güncelle
                 if (variant.images && variant.images.length > 0) {
-                    modalMainImage.src = variant.images[0];
+                    modalMainImage.src = fixImagePath(variant.images[0]);
                     
                     // Thumbnail'ları güncelle
                     imageThumbnails.innerHTML = '';
                     variant.images.forEach((image, imgIndex) => {
                         const thumbnail = document.createElement('img');
                         thumbnail.classList.add('thumbnail');
-                        thumbnail.src = image;
+                        thumbnail.src = fixImagePath(image);
                         thumbnail.alt = `${product.name} - ${variant.color} - ${imgIndex + 1}`;
                         if (imgIndex === 0) thumbnail.classList.add('active');
                         
                         thumbnail.onclick = () => {
-                            modalMainImage.src = image;
+                            modalMainImage.src = fixImagePath(image);
                             imageThumbnails.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
                             thumbnail.classList.add('active');
                         };
