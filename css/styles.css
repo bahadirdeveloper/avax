@@ -47,6 +47,11 @@ body {
     text-transform: uppercase;
 }
 
+.logo-image {
+    height: 50px;
+    width: auto;
+}
+
 .nav-primary {
     flex: 1;
     text-align: right;
