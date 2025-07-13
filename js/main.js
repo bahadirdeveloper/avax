@@ -6,7 +6,11 @@ let allProducts = [];
 // URL encoding için yardımcı fonksiyon
 function fixImagePath(path) {
     // Türkçe karakterleri ve boşlukları düzgün encode et
-    return path.split('/').map(segment => encodeURIComponent(segment)).join('/');
+    // Özellikle : karakterini %3A olarak encode et
+    return path.split('/').map(segment => {
+        // encodeURIComponent : karakterini de encode eder
+        return encodeURIComponent(segment);
+    }).join('/');
 }
 
 // Kategori eşleştirme haritası
