@@ -407,36 +407,36 @@ window.PRODUCTS_DATA = [
         "category": "Taktik Gömlek",
         "categorySlug": "taktik-gomlek",
         "description": "Bu ürün, AKN 225 GOMLEK, en zorlu koşullara dayanacak şekilde tasarlanmıştır ve operasyonel ihtiyaçlarınız için üstün performans sunar.",
-        "thumbnail": "taktik-gomlek/akn-225-gomlek/ANTRASIT/32.webp",
+        "thumbnail": "taktik-gomlek/akn-225-gomlek/antrasit/32.webp",
         "variants": [
             {
                 "color": "ANTRASIT",
                 "images": [
-                    "taktik-gomlek/akn-225-gomlek/ANTRASIT/32.webp"
+                    "taktik-gomlek/akn-225-gomlek/antrasit/32.webp"
                 ]
             },
             {
-                "color": "FUME",
+                "color": "FÜME",
                 "images": [
-                    "taktik-gomlek/akn-225-gomlek/FUME/35.webp"
+                    "taktik-gomlek/akn-225-gomlek/fume/35.webp"
                 ]
             },
             {
                 "color": "HAKI",
                 "images": [
-                    "taktik-gomlek/akn-225-gomlek/HAKI/31.webp"
+                    "taktik-gomlek/akn-225-gomlek/haki/31.webp"
                 ]
             },
             {
                 "color": "SIYAH",
                 "images": [
-                    "taktik-gomlek/akn-225-gomlek/SIYAH/34.webp"
+                    "taktik-gomlek/akn-225-gomlek/siyah/34.webp"
                 ]
             },
             {
                 "color": "TAS",
                 "images": [
-                    "taktik-gomlek/akn-225-gomlek/TAS/33.webp"
+                    "taktik-gomlek/akn-225-gomlek/tas/33.webp"
                 ]
             }
         ]
@@ -744,36 +744,36 @@ window.PRODUCTS_DATA = [
         "category": "Eşofman Takımı",
         "categorySlug": "esofman-takimi",
         "description": "Bu ürün, AKN EŞOFMAN TAKIMI, en zorlu koşullara dayanacak şekilde tasarlanmıştır ve operasyonel ihtiyaçlarınız için üstün performans sunar.",
-        "thumbnail": "esofman-takimi/akn-esofman-takimi/FUME/241.webp",
+        "thumbnail": "techizat-aksesuar/akn-esofman-takimi-/fume/241.webp",
         "variants": [
             {
                 "color": "FUME",
                 "images": [
-                    "esofman-takimi/akn-esofman-takimi/FUME/241.webp",
-                    "esofman-takimi/akn-esofman-takimi/FUME/242.webp",
-                    "esofman-takimi/akn-esofman-takimi/FUME/243.webp",
-                    "esofman-takimi/akn-esofman-takimi/FUME/244.webp",
-                    "esofman-takimi/akn-esofman-takimi/FUME/245.webp"
+                    "techizat-aksesuar/akn-esofman-takimi-/fume/241.webp",
+                    "techizat-aksesuar/akn-esofman-takimi-/fume/242.webp",
+                    "techizat-aksesuar/akn-esofman-takimi-/fume/243.webp",
+                    "techizat-aksesuar/akn-esofman-takimi-/fume/244.webp",
+                    "techizat-aksesuar/akn-esofman-takimi-/fume/245.webp"
                 ]
             },
             {
                 "color": "LACIVERT",
                 "images": [
-                    "esofman-takimi/akn-esofman-takimi/LACIVERT/236.webp",
-                    "esofman-takimi/akn-esofman-takimi/LACIVERT/237.webp",
-                    "esofman-takimi/akn-esofman-takimi/LACIVERT/238.webp",
-                    "esofman-takimi/akn-esofman-takimi/LACIVERT/239.webp",
-                    "esofman-takimi/akn-esofman-takimi/LACIVERT/240.webp"
+                    "techizat-aksesuar/akn-esofman-takimi-/lacivert/236.webp",
+                    "techizat-aksesuar/akn-esofman-takimi-/lacivert/237.webp",
+                    "techizat-aksesuar/akn-esofman-takimi-/lacivert/238.webp",
+                    "techizat-aksesuar/akn-esofman-takimi-/lacivert/239.webp",
+                    "techizat-aksesuar/akn-esofman-takimi-/lacivert/240.webp"
                 ]
             },
             {
                 "color": "SIYAH",
                 "images": [
-                    "esofman-takimi/akn-esofman-takimi/SIYAH/231.webp",
-                    "esofman-takimi/akn-esofman-takimi/SIYAH/232.webp",
-                    "esofman-takimi/akn-esofman-takimi/SIYAH/233.webp",
-                    "esofman-takimi/akn-esofman-takimi/SIYAH/234.webp",
-                    "esofman-takimi/akn-esofman-takimi/SIYAH/235.webp"
+                    "techizat-aksesuar/akn-esofman-takimi-/siyah/231.webp",
+                    "techizat-aksesuar/akn-esofman-takimi-/siyah/232.webp",
+                    "techizat-aksesuar/akn-esofman-takimi-/siyah/233.webp",
+                    "techizat-aksesuar/akn-esofman-takimi-/siyah/234.webp",
+                    "techizat-aksesuar/akn-esofman-takimi-/siyah/235.webp"
                 ]
             }
         ]

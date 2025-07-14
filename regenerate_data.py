@@ -1,6 +1,7 @@
 
 import os
 import json
+import re
 
 # This mapping is based on the folder names and the desired display names in the UI
 CATEGORY_MAP = {
@@ -16,6 +17,24 @@ CATEGORY_MAP = {
 # Function to generate a more readable name from a slug
 def name_from_slug(slug):
     return slug.replace('-', ' ').replace('_', ' ').upper()
+
+# Kategori slug'ı üretmek için fonksiyon
+
+def slugify_category(category_name):
+    # Türkçe karakterleri ASCII'ye çevir
+    tr_map = str.maketrans('çğıöşüÇĞİÖŞÜ', 'cgiosuCGIOSU')
+    s = category_name.translate(tr_map)
+    # Küçük harfe çevir
+    s = s.lower()
+    # & ve / gibi özel karakterleri kaldır
+    s = s.replace('&', '').replace('/', '').replace('(', '').replace(')', '')
+    # Noktalama ve tire/boşluk fazlalıklarını kaldır
+    s = re.sub(r'[^a-z0-9]+', '-', s)
+    s = re.sub(r'-+', '-', s)
+    s = s.strip('-')
+    # 't-shirt' gibi tireli kelimeleri birleştir
+    s = s.replace('t-shirt', 'tshirt')
+    return s
 
 def generate_product_data():
     products = []
@@ -38,6 +57,7 @@ def generate_product_data():
             product_data = {
                 "name": product_name,
                 "category": category_name,
+                "categorySlug": slugify_category(category_name),
                 "description": f"Bu ürün, {product_name}, en zorlu koşullara dayanacak şekilde tasarlanmıştır ve operasyonel ihtiyaçlarınız için üstün performans sunar.",
                 "thumbnail": "",
                 "variants": []

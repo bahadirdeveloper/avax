@@ -8,69 +8,72 @@ def update_products_data():
     # Mapping of old folder names to new normalized names
     folder_mappings = {
         # Mont / Yağmurluk
-        'AKN SOĞUK İKLİM MONT ': 'akn-soguk-iklim-mont-',
-        'RÜZGARLIK:YAĞMURLUK ': 'ruzgarlik-yagmurluk-',
+        'AKN SOGUK IKLIM MONT ': 'akn-soguk-iklim-mont',
+        'RÜZGARLIK:YAĞMURLUK ': 'ruzgarlik-yagmurluk',
         
         # Outdoor Ayakkabı
-        'VOGEL m1493 SÜET AYAKKABI': 'vogel-m1493-süet-ayakkabi',
+        'VOGEL m1493 SÜET AYAKKABI': 'vogel-m1493-suet-ayakkabi',
         
         # Outdoor T-shirt
-        'BİSİKLET KISA KOL TAKTİK': 'bi̇si̇klet-kisa-kol-takti̇k',
-        'BSKLT YAKA UZUN KOL TAKTİK TİŞÖRT': 'bsklt-yaka-uzun-kol-takti̇k-ti̇şört',
-        'POLO YAKA KISA KOL TAKTİK TİŞÖRT': 'polo-yaka-kisa-kol-takti̇k-ti̇şört',
+        'BİSİKLET KISA KOL TAKTİK': 'bisiklet-kisa-kol-taktik',
+        'BSKLT YAKA UZUN KOL TAKTİK TİŞÖRT': 'bsklt-yaka-uzun-kol-taktik-tisort',
+        'POLO YAKA KISA KOL TAKTİK TİŞÖRT': 'polo-yaka-kisa-kol-taktik-tisort',
         
         # Taktik Gömlek
-        'AKN 225 GÖMLEK': 'akn-225-gömlek',
-        'AVX 311 TAKTİK GÖMLEK': 'avx-311-takti̇k-gömlek',
-        'AVX 312 TAKTİK GÖMLEK': 'avx-312-takti̇k-gömlek',
+        'AKN 225 GÖMLEK': 'akn-225-gomlek',
+        'AVX 311 TAKTİK GÖMLEK': 'avx-311-taktik-gomlek',
+        'AVX 312 TAKTİK GÖMLEK': 'avx-312-taktik-gomlek',
         
         # Taktik Bot
-        'LOWA ZEPHYR MK2 Gtx ASKERİ BOT': 'lowa-zephyr-mk2-gtx-askeri̇-bot',
+        'LOWA ZEPHYR MK2 Gtx ASKERİ BOT': 'lowa-zephyr-mk2-gtx-askeri-bot',
         'VOGEL 1490': 'vogel-1490',
         'VOGEL 1491 FERMUARLI OUTDOOR BOT': 'vogel-1491-fermuarli-outdoor-bot',
-        'VOGEL 1492 ': 'vogel-1492-',
-        'VOGEL GUARD RS ': 'vogel-guard-rs-',
-        'VOGEL STARK COYOTE TAKTİK BOT': 'vogel-stark-coyote-takti̇k-bot',
+        'VOGEL 1492 ': 'vogel-1492',
+        'VOGEL GUARD RS ': 'vogel-guard-rs',
+        'VOGEL STARK COYOTE TAKTİK BOT': 'vogel-stark-coyote-taktik-bot',
         
         # Taktik Pantolon
-        'AKN 112 TAKTİK PANTOLON': 'akn-112-takti̇k-pantolon',
+        'AKN 112 TAKTİK PANTOLON': 'akn-112-taktik-pantolon',
         'AKN 162 JANDARMA SOFTSHELL PANTOLON': 'akn-162-jandarma-softshell-pantolon',
-        'AKN 162 TAKTİK PANTOLON SOFTSHELL': 'akn-162-takti̇k-pantolon-softshell',
-        'AKN 513 TAKTİK PANTOLON': 'akn-513-takti̇k-pantolon',
-        'AKN 514 TAKTİK PANTOLON': 'akn-514-takti̇k-pantolon',
-        'AKN 516 TAKTİK PANTOLON': 'akn-516-takti̇k-pantolon',
-        'AKN515 TAKTİK PANTOLON': 'akn515-takti̇k-pantolon',
+        'AKN 162 TAKTİK PANTOLON SOFTSHELL': 'akn-162-taktik-pantolon-softshell',
+        'AKN 513 TAKTİK PANTOLON': 'akn-513-taktik-pantolon',
+        'AKN 514 TAKTİK PANTOLON': 'akn-514-taktik-pantolon',
+        'AKN 516 TAKTİK PANTOLON': 'akn-516-taktik-pantolon',
+        'AKN515 TAKTİK PANTOLON': 'akn515-taktik-pantolon',
         
         # Teçhizat & Aksesuar
-        'AKN AOUTDOOR 45 LT ÇANTA': 'akn-aoutdoor-45-lt-çanta',
-        'AKN BALİSTİK PLAKA TAŞIYICI HÜCUM YELEĞİ TSK': 'akn-bali̇sti̇k-plaka-taşiyici-hücum-yeleği̇-tsk',
-        'AKN BALİSTİK PLAKA TAŞIYICI HÜCÜM YELEĞİ': 'akn-bali̇sti̇k-plaka-taşiyici-hücüm-yeleği̇',
-        'AKN EŞOFMAN TAKIMI ': 'akn-eşofman-takimi-',
+        'AKN AOUTDOOR 45 LT ÇANTA': 'akn-aoutdoor-45-lt-canta',
+        'AKN BALİSTİK PLAKA TAŞIYICI HÜCUM YELEĞİ TSK': 'akn-balistik-plaka-tasiyici-hucum-yelegi-tsk',
+        'AKN BALİSTİK PLAKA TAŞIYICI HÜCÜM YELEĞİ': 'akn-balistik-plaka-tasiyici-hucum-yelegi',
+        'AKN EŞOFMAN TAKIMI ': 'akn-esofman-takimi',
         'AKN OPERASYON KOMBAT JANDARMA': 'akn-operasyon-kombat-jandarma',
         'AKN OPERASYON PANTOLONU - JANDARMA': 'akn-operasyon-pantolonu---jandarma',
-        'DİZLİK DİRSEKLİK KORUMA SETİ ASKERİ YEŞİL': 'di̇zli̇k-di̇rsekli̇k-koruma-seti̇-askeri̇-yeşi̇l',
-        'JANDARMA ASAYİŞ TAKIMI YAZLIK': 'jandarma-asayi̇ş-takimi-yazlik',
-        'TABANCA GÖZLÜK TAKTİK ÜÇGEN ÇANTA': 'tabanca-gözlük-takti̇k-üçgen-çanta',
-        'TABANCA TAŞIMA GÖZLÜ KARE ': 'tabanca-taşima-gözlü-kare-'
+        'DİZLİK DİRSEKLİK KORUMA SETİ ASKERİ YEŞİL': 'dizlik-dirseklik-koruma-seti-askeri-yesil',
+        'JANDARMA ASAYİŞ TAKIMI YAZLIK': 'jandarma-asayis-takimi-yazlik',
+        'TABANCA GÖZLÜK TAKTİK ÜÇGEN ÇANTA': 'tabanca-gozluk-taktik-ucgen-canta',
+        'TABANCA TAŞIMA GÖZLÜ KARE ': 'tabanca-tasima-gozlu-kare'
     }
     
-    # Renk isimleri de lowercase olmalı (ama Türkçe karakterler korunmalı)
+    # Renk isimleri, dosya sistemindeki klasör adlarıyla eşleşmelidir.
     color_mappings = {
-        'BEYAZ': 'beyaz',
-        'HAKİ': 'haki̇',
-        'SİYAH': 'si̇yah',
-        'BEJ': 'bej',
-        'LAVİCERT': 'lavi̇cert',
-        'VİZON': 'vi̇zon',
-        'KAHVE': 'kahve',
-        'ANTRASİT': 'antrasi̇t',
-        'TAŞ': 'taş',
-        'FÜME': 'füme',
-        'LACİVERT': 'laci̇vert',
-        'JANDARMA': 'jandarma',
-        'TSK': 'tsk',
-        'STANDART': 'standart',
-        'COYOTE': 'coyote'
+        'beyaz': 'BEYAZ',
+        'haki': 'HAKI',
+        'siyah': 'SIYAH',
+        'bej': 'BEJ',
+        'lavicert': 'LAVICERT',
+        'vizon': 'VIZON',
+        'kahve': 'KAHVE',
+        'antrasit': 'ANTRASIT',
+        'taş': 'TAS',
+        'füme': 'FUME',
+        'lacivert': 'LACIVERT',
+        'jandarma': 'JANDARMA',
+        'tsk': 'TSK',
+        'standart': 'STANDART',
+        'coyote': 'COYOTE',
+        'gri': 'GRI',
+        'krem': 'KREM',
+        'askeri-yesil': 'ASKERI-YESIL'
     }
     
     # Read the products-data.js file
@@ -94,10 +97,10 @@ def update_products_data():
     
     # Replace color names in paths
     for old_color, new_color in color_mappings.items():
-        # Replace in paths (between slashes)
-        pattern = f'/{old_color}/'
+        # Replace in paths (between slashes), case-insensitive
+        pattern = re.compile(f'/({re.escape(old_color)})/', re.IGNORECASE)
         replacement = f'/{new_color}/'
-        content = content.replace(pattern, replacement)
+        content = pattern.sub(replacement, content)
     
     # Also update thumbnail paths at the beginning of product definitions
     # This is for paths like "mont-yagmurluk/AKN SOGUK IKLIM MONT /BEYAZ/136.webp"

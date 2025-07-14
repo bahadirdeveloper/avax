@@ -1,26 +1,31 @@
 #!/usr/bin/env python3
 import os
 import shutil
+import unicodedata
 
 def normalize_turkish(text):
-    """Convert Turkish characters to ASCII equivalents"""
+    """Convert Turkish characters to ASCII equivalents, remove all diacritics, force lowercase, hyphenate, and NFC normalization"""
+    # 1. Unicode NFD (ayrıştırılmış) formuna çevir
+    text = unicodedata.normalize('NFD', text)
+    # 2. Tüm diakritik işaretleri kaldır (örn: ı̇, ü, ş, ö, ç, ğ, â, î, û, ü, ö, ş, ç, ı, İ, etc.)
+    text = ''.join(c for c in text if unicodedata.category(c) != 'Mn')
+    # 3. Türkçe karakterleri ASCII'ye çevir
     turkish_chars = {
         'ç': 'c', 'Ç': 'C',
         'ğ': 'g', 'Ğ': 'G',
-        'ı': 'i', 'I': 'I',
-        'İ': 'I', 'i': 'i',
+        'ı': 'i', 'I': 'i',
+        'İ': 'i',
         'ö': 'o', 'Ö': 'O',
         'ş': 's', 'Ş': 'S',
         'ü': 'u', 'Ü': 'U'
     }
-    
     result = text
     for turkish, ascii_char in turkish_chars.items():
         result = result.replace(turkish, ascii_char)
-    
-    # Replace spaces with hyphens and convert to lowercase
+    # 4. Küçük harfe çevir, boşlukları tire yap
     result = result.replace(' ', '-').lower()
-    
+    # 5. Unicode NFC'ye döndür
+    result = unicodedata.normalize('NFC', result)
     return result
 
 def rename_files_and_folders(root_path):

@@ -87,19 +87,20 @@ body {
 }
 
 .nav-categories {
-    padding-top: 15px;
-    padding-bottom: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-top: 1px solid rgba(91, 255, 167, 0.2);
-    border-bottom: 1px solid rgba(91, 255, 167, 0.2);
+    padding: 20px 0;
+    background: linear-gradient(to bottom, rgba(18, 18, 18, 0.8), rgba(24, 24, 24, 0.9));
+    border-top: 1px solid rgba(91, 255, 167, 0.15);
+    border-bottom: 1px solid rgba(91, 255, 167, 0.15);
+    backdrop-filter: blur(5px);
 }
 
 .nav-menu-categories {
     list-style: none;
     display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    padding: 15px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 15px;
     margin: 0;
 }
 
@@ -110,39 +111,35 @@ body {
 .category-link {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     text-decoration: none;
     color: #D1B98D;
-    font-size: 16px;
+    background-color: rgba(45, 45, 45, 0.6);
+    font-size: 14px;
     white-space: nowrap;
-    transition: all 0.3s ease;
-    padding: 8px 12px;
-    border-radius: 4px;
-    position: relative;
-    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    padding: 10px 20px;
+    border: 1px solid rgba(209, 185, 141, 0.2);
+    border-radius: 50px;
+    font-weight: 600;
     letter-spacing: 0.5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .category-link:hover {
-    color: #5BFFA7;
-    transform: translateY(-2px);
-    background-color: rgba(91, 255, 167, 0.1);
+    color: #FFFFFF;
+    background-color: rgba(232, 69, 69, 0.8);
+    border-color: rgba(232, 69, 69, 1);
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 6px 15px rgba(232, 69, 69, 0.3);
 }
 
-.category-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background-color: #5BFFA7;
-    transform: translateX(-50%);
-    transition: width 0.3s ease;
-}
-
-.category-link:hover::after {
-    width: 80%;
+.category-link.active {
+    color: #FFFFFF;
+    background-color: #E84545;
+    border-color: #E84545;
+    box-shadow: 0 4px 20px rgba(232, 69, 69, 0.4);
+    transform: scale(1.05);
 }
 
 .category-icon {
