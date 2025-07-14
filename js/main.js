@@ -10,11 +10,11 @@ let currentSearchTerm = '';
 function updateProductVisibility() {
     let hasVisibleProducts = false;
     document.querySelectorAll('.product-item').forEach(product => {
-        const category = product.dataset.category;
-        const name = product.querySelector('.product-name').textContent.toLowerCase();
+        const category = normalizeString(product.dataset.category);
+        const name = normalizeString(product.querySelector('.product-name').textContent);
 
-        const categoryMatch = (currentCategory === 'all') || (category === currentCategory);
-        const searchMatch = name.includes(currentSearchTerm);
+        const categoryMatch = (currentCategory === 'all') || (category === normalizeString(currentCategory));
+        const searchMatch = name.includes(normalizeString(currentSearchTerm));
 
         const isVisible = categoryMatch && searchMatch;
         product.style.display = isVisible ? '' : 'none';
@@ -39,9 +39,8 @@ function renderProducts(products) {
     products.forEach((product, index) => {
         const productElement = document.createElement('div');
         productElement.className = 'product-item';
-        // Create a URL-friendly slug for the category
-        product.categorySlug = product.category.toLowerCase().replace(/ & /g, '-').replace(/\s+/g, '-');
-        productElement.dataset.category = product.categorySlug;
+        // Artık doğrudan categorySlug kullan
+        productElement.dataset.category = normalizeString(product.categorySlug);
         
         productElement.innerHTML = `
             <div class="product-thumb-wrapper">
@@ -125,7 +124,7 @@ function showProductModal(product) {
         product.variants.forEach((variant, index) => {
             const colorDot = document.createElement('span');
             colorDot.className = 'color-dot';
-            const colorSlug = variant.color.toLowerCase().replace('i̇', 'i').replace(/[^a-z0-9]/g, '');
+            const colorSlug = normalizeString(variant.color);
             colorDot.classList.add(colorSlug);
             colorDot.title = variant.color;
             if (index === 0) colorDot.classList.add('active');
@@ -157,6 +156,17 @@ function scrollToProducts() {
     document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
 }
 
+// Genel normalize fonksiyonu (kategori, varyant, arama için)
+function normalizeString(str) {
+    return str
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/\p{Diacritic}/gu, '')
+        .replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ş/g, 's').replace(/ü/g, 'u')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+}
+
 
 // --- EVENT LISTENERS ---
 document.addEventListener('DOMContentLoaded', () => {
@@ -183,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             const category = btn.dataset.category;
-            currentCategory = category;
+            currentCategory = normalizeString(category);
 
             // Update active state
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
