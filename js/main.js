@@ -192,13 +192,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.filter-btn, .category-link').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            const category = btn.dataset.category;
+            const category = btn.dataset.category || 'all';
             currentCategory = normalizeString(category);
 
             // Update active state
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             document.querySelectorAll('.category-link').forEach(b => b.classList.remove('active'));
-            document.querySelector(`.filter-btn[data-category="${category}"]`).classList.add('active');
+            const filterBtn = document.querySelector(`.filter-btn[data-category="${category}"]`);
+            if (filterBtn) filterBtn.classList.add('active');
             const categoryLink = document.querySelector(`.category-link[data-category="${category}"]`);
             if (categoryLink) categoryLink.classList.add('active');
             
