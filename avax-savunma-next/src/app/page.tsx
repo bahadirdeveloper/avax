@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { FeaturedProducts } from "../components/featured-products";
+
 const heroHighlights = [
   "NATO uyumlu taktik ekipman",
   "Alanında uzman tedarik ağı",
@@ -118,6 +120,8 @@ const socialLinks = [
   },
 ];
 
+const headingFont = "font-[family-name:var(--font-orbitron)]";
+
 export default function Home() {
   return (
     <>
@@ -140,17 +144,25 @@ export default function Home() {
                 <p className="text-xs uppercase tracking-[0.3em] text-slate-400">
                   Askeri Seviye Teçhizat
                 </p>
-                <p className="text-lg font-semibold">AVAX SAVUNMA</p>
+                <p className={`text-lg font-semibold text-white ${headingFont}`}>
+                  AVAX SAVUNMA
+                </p>
               </div>
             </div>
             <div className="flex flex-wrap items-center gap-4">
-              <Link href="#about" className="hover:text-white">
+              <Link href="#about" className="text-slate-300 transition hover:text-white">
                 Hakkımızda
               </Link>
-              <Link href="#categories" className="hover:text-white">
+              <Link
+                href="#categories"
+                className="text-slate-300 transition hover:text-white"
+              >
                 Ürün Kategorileri
               </Link>
-              <Link href="#contact" className="hover:text-white">
+              <Link
+                href="#contact"
+                className="text-slate-300 transition hover:text-white"
+              >
                 İletişim
               </Link>
               <Link
@@ -167,7 +179,9 @@ export default function Home() {
               <p className="text-sm uppercase tracking-[0.3em] text-[#5bffa7]">
                 Savunma Sanayi Tedarik Ortağınız
               </p>
-              <h1 className="text-3xl font-semibold leading-tight md:text-5xl">
+              <h1
+                className={`text-3xl font-semibold leading-tight text-white md:text-5xl ${headingFont}`}
+              >
                 NATO standartlarında taktik giyim ve profesyonel ekipman ile her
                 göreve hazır olun.
               </h1>
@@ -225,10 +239,12 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="bg-[#f8fafc] text-[#0f172a]">
+      <main className="bg-[#030b18] text-[#e2e8f0]">
         <section id="about" className="mx-auto max-w-5xl space-y-6 px-6 py-20 md:px-10">
-          <h2 className="text-3xl font-semibold">Kurumsal Profil</h2>
-          <p className="text-lg leading-relaxed text-slate-600">
+          <h2 className={`text-3xl font-semibold text-white md:text-4xl ${headingFont}`}>
+            Kurumsal Profil
+          </h2>
+          <p className="text-lg leading-relaxed text-slate-300">
             AVAX Savunma, operasyonel birlikler için askeri seviye giyim ve
             taktik ekipman tedarikinde uzmanlaşmış yerli bir markadır. Ürün
             seçimi, test ve kalite kontrol süreçlerini kendi mühendis ekibimiz
@@ -238,12 +254,12 @@ export default function Home() {
             {differentiators.map((item) => (
               <article
                 key={item.title}
-                className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:border-[#5bffa7]/40"
               >
-                <h3 className="text-xl font-semibold text-[#0f172a]">
+                <h3 className={`text-xl font-semibold text-white ${headingFont}`}>
                   {item.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                <p className="mt-3 text-sm leading-relaxed text-slate-300">
                   {item.description}
                 </p>
               </article>
@@ -251,12 +267,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="categories" className="bg-white py-20">
+        <section id="categories" className="bg-[#040b15] py-20">
           <div className="mx-auto max-w-6xl space-y-6 px-6 md:px-10">
             <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
-                <h2 className="text-3xl font-semibold">Ürün Kategorileri</h2>
-                <p className="mt-2 max-w-2xl text-base text-slate-600">
+                <h2 className={`text-3xl font-semibold text-white md:text-4xl ${headingFont}`}>
+                  Ürün Kategorileri
+                </h2>
+                <p className="mt-2 max-w-2xl text-base text-slate-300">
                   Sıcak-soğuk iklim operasyonları, özel kuvvet görevleri ve şehir
                   içi güvenlik operasyonları için optimize edilmiş taktik giyim ve
                   ekipman çözümlerini stoklarımızda tutuyoruz.
@@ -264,7 +282,7 @@ export default function Home() {
               </div>
               <Link
                 href="mailto:info@avaxsavunma.com"
-                className="text-sm font-semibold text-[#0d4a64] hover:underline"
+                className="text-sm font-semibold text-[#5bffa7] transition hover:text-white"
               >
                 Katalog talep et →
               </Link>
@@ -273,9 +291,9 @@ export default function Home() {
               {categories.map((category) => (
                 <article
                   key={category.slug}
-                  className="group flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-sm transition hover:-translate-y-1 hover:border-[#0d4a64] hover:shadow-lg"
+                  className="group flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:border-[#5bffa7]/40"
                 >
-                  <div className="relative h-48 w-full overflow-hidden bg-slate-200">
+                  <div className="relative h-48 w-full overflow-hidden bg-slate-900">
                     <Image
                       src={category.image}
                       alt={`${category.name} örnek ürün görseli`}
@@ -286,13 +304,13 @@ export default function Home() {
                     />
                   </div>
                   <div className="flex flex-1 flex-col gap-3 p-6">
-                    <h3 className="text-lg font-semibold text-[#0f172a]">
+                    <h3 className={`text-lg font-semibold text-white ${headingFont}`}>
                       {category.name}
                     </h3>
-                    <p className="text-sm leading-relaxed text-slate-600">
+                    <p className="text-sm leading-relaxed text-slate-300">
                       {category.description}
                     </p>
-                    <span className="mt-auto text-xs font-semibold uppercase tracking-[0.3em] text-[#0d4a64]">
+                    <span className="mt-auto text-xs font-semibold uppercase tracking-[0.3em] text-[#5bffa7]">
                       {category.slug.replace(/-/g, " ")}
                     </span>
                   </div>
@@ -302,60 +320,64 @@ export default function Home() {
           </div>
         </section>
 
+        <FeaturedProducts />
+
         <section className="mx-auto max-w-6xl space-y-6 px-6 py-20 md:px-10">
-          <h2 className="text-3xl font-semibold">Saha başarısı için güvenilir destek</h2>
+          <h2 className={`text-3xl font-semibold text-white md:text-4xl ${headingFont}`}>
+            Saha başarısı için güvenilir destek
+          </h2>
           <div className="grid gap-8 md:grid-cols-[2fr_3fr]">
-            <div className="space-y-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-              <h3 className="text-lg font-semibold text-[#0f172a]">
+            <div className="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/20">
+              <h3 className={`text-lg font-semibold text-white ${headingFont}`}>
                 Sertifikasyon ve uyumluluk
               </h3>
-              <p className="text-sm leading-relaxed text-slate-600">
+              <p className="text-sm leading-relaxed text-slate-300">
                 Tedarik zincirimiz, Türkiye ve uluslararası savunma projelerinde
                 aranan standartlara uygunluk raporları ile desteklenir. Ürünlerimiz
                 kullanıcı testlerinden geçirilerek operasyonel uyumluluğu
                 doğrulanır.
               </p>
-              <ul className="space-y-2 text-sm text-slate-600">
+              <ul className="space-y-2 text-sm text-slate-300">
                 <li>NATO AQAP, ISO 9001 ve TSE hizmet yeterlilik belgeleri</li>
                 <li>Balistik ve ergonomi test raporları</li>
                 <li>Operasyon sonrası kullanıcı geri bildirim döngüsü</li>
               </ul>
             </div>
             <div className="grid gap-6 md:grid-cols-2">
-              <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-                <h3 className="text-lg font-semibold text-[#0f172a]">
+              <article className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/20">
+                <h3 className={`text-lg font-semibold text-white ${headingFont}`}>
                   Lojistik ve teslimat
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                <p className="mt-3 text-sm leading-relaxed text-slate-300">
                   Stok yönetimi, kalite kontrol ve sigortalı sevkiyat süreçleri tek
                   elden yönetilir. Uluslararası gönderiler için gümrük ve paketleme
                   danışmanlığı sunuyoruz.
                 </p>
               </article>
-              <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-                <h3 className="text-lg font-semibold text-[#0f172a]">
+              <article className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/20">
+                <h3 className={`text-lg font-semibold text-white ${headingFont}`}>
                   Saha uyarlamaları
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                <p className="mt-3 text-sm leading-relaxed text-slate-300">
                   Birlik logoları, kişiye özel numaralandırma ve görev bazlı
                   setler oluşturuyor; eğitim atölyeleri ile ekipman kullanımını
                   standartlaştırıyoruz.
                 </p>
               </article>
-              <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-                <h3 className="text-lg font-semibold text-[#0f172a]">
+              <article className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/20">
+                <h3 className={`text-lg font-semibold text-white ${headingFont}`}>
                   Yerel destek ağı
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                <p className="mt-3 text-sm leading-relaxed text-slate-300">
                   Mersin merkezli depo ve showroomumuzda numune inceleme,
                   bakım-onarım ve hızlı parça değişimi sağlıyoruz.
                 </p>
               </article>
-              <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-                <h3 className="text-lg font-semibold text-[#0f172a]">
+              <article className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/20">
+                <h3 className={`text-lg font-semibold text-white ${headingFont}`}>
                   Dijital ürün kataloğu
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                <p className="mt-3 text-sm leading-relaxed text-slate-300">
                   Güncel stok, teknik çizim ve ölçü tablolarını içeren katalogları
                   PDF ve çevrim içi paylaşım formatlarında sunuyoruz.
                 </p>
@@ -367,7 +389,9 @@ export default function Home() {
         <section className="bg-[#0d1b2a] py-20 text-white">
           <div className="mx-auto max-w-5xl space-y-10 px-6 md:px-10">
             <div className="space-y-4 text-center">
-              <h2 className="text-3xl font-semibold">Sık sorulan sorular</h2>
+              <h2 className={`text-3xl font-semibold md:text-4xl ${headingFont}`}>
+                Sık sorulan sorular
+              </h2>
               <p className="text-base text-slate-200">
                 Taktik ekipman tedarikiyle ilgili merak edilen konuların kısa
                 yanıtlarını burada bulabilirsiniz.
@@ -390,93 +414,106 @@ export default function Home() {
         </section>
 
         <section id="contact" className="mx-auto max-w-5xl px-6 py-20 md:px-10">
-          <div className="grid gap-10 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm md:grid-cols-[2fr_3fr]">
+          <div className="grid gap-10 rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg shadow-black/20 md:grid-cols-[2fr_3fr]">
             <div className="space-y-3">
-              <h2 className="text-3xl font-semibold text-[#0f172a]">
+              <h2 className={`text-3xl font-semibold text-white md:text-4xl ${headingFont}`}>
                 İletişime geçin
               </h2>
-              <p className="text-base text-slate-600">
+              <p className="text-base text-slate-300">
                 Savunma projeleriniz için doğru ürün ve tedarik modelini birlikte
                 belirleyelim. Uzman ekibimiz 48 saat içinde size dönüş yapar.
               </p>
-              <div className="space-y-3 text-sm text-slate-600">
+              <div className="space-y-3 text-sm text-slate-300">
                 <div>
-                  <p className="font-semibold text-[#0f172a]">Adres</p>
+                  <p className={`font-semibold text-white ${headingFont}`}>Adres</p>
                   <p>
                     Göksu Mah. Oğuz Kağan Cad. Geçer Apt. No:20/3
                     <br /> Silifke / Mersin
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#0f172a]">Telefon</p>
-                  <Link href="tel:+905403843333" className="hover:underline">
+                  <p className={`font-semibold text-white ${headingFont}`}>Telefon</p>
+                  <Link
+                    href="tel:+905403843333"
+                    className="text-[#5bffa7] transition hover:text-white"
+                  >
                     +90 540 384 33 33
                   </Link>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#0f172a]">E-posta</p>
+                  <p className={`font-semibold text-white ${headingFont}`}>E-posta</p>
                   <Link
                     href="mailto:info@avaxsavunma.com"
-                    className="hover:underline"
+                    className="text-[#5bffa7] transition hover:text-white"
                   >
                     info@avaxsavunma.com
                   </Link>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#0f172a]">Çalışma saatleri</p>
+                  <p className={`font-semibold text-white ${headingFont}`}>
+                    Çalışma saatleri
+                  </p>
                   <p>Hafta içi 09:00 – 18:00 · Cumartesi 09:00 – 14:00</p>
                 </div>
               </div>
             </div>
             <form
-              className="grid gap-4 text-sm text-slate-600"
+              className="grid gap-4 text-sm text-slate-200"
               action="https://formsubmit.co/info@avaxsavunma.com"
               method="POST"
             >
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_subject" value="AVAX Savunma web formu" />
               <label className="grid gap-2">
-                <span className="font-semibold text-[#0f172a]">Adınız Soyadınız</span>
+                <span className={`font-semibold text-white ${headingFont}`}>
+                  Adınız Soyadınız
+                </span>
                 <input
                   required
                   type="text"
                   name="name"
-                  className="rounded-xl border border-slate-200 p-3"
+                  className="rounded-xl border border-white/20 bg-[#030712]/40 p-3 text-white placeholder:text-slate-400"
                   placeholder="Adınızı girin"
                 />
               </label>
               <label className="grid gap-2">
-                <span className="font-semibold text-[#0f172a]">E-posta</span>
+                <span className={`font-semibold text-white ${headingFont}`}>
+                  E-posta
+                </span>
                 <input
                   required
                   type="email"
                   name="email"
-                  className="rounded-xl border border-slate-200 p-3"
+                  className="rounded-xl border border-white/20 bg-[#030712]/40 p-3 text-white placeholder:text-slate-400"
                   placeholder="ornek@kurum.com"
                 />
               </label>
               <label className="grid gap-2">
-                <span className="font-semibold text-[#0f172a]">Telefon</span>
+                <span className={`font-semibold text-white ${headingFont}`}>
+                  Telefon
+                </span>
                 <input
                   type="tel"
                   name="phone"
-                  className="rounded-xl border border-slate-200 p-3"
+                  className="rounded-xl border border-white/20 bg-[#030712]/40 p-3 text-white placeholder:text-slate-400"
                   placeholder="(5xx) xxx xx xx"
                 />
               </label>
               <label className="grid gap-2">
-                <span className="font-semibold text-[#0f172a]">İhtiyacınız</span>
+                <span className={`font-semibold text-white ${headingFont}`}>
+                  İhtiyacınız
+                </span>
                 <textarea
                   required
                   name="message"
                   rows={4}
-                  className="rounded-xl border border-slate-200 p-3"
+                  className="rounded-xl border border-white/20 bg-[#030712]/40 p-3 text-white placeholder:text-slate-400"
                   placeholder="Tedarik etmek istediğiniz ürün ve adet bilgisini paylaşın"
                 />
               </label>
               <button
                 type="submit"
-                className="rounded-full bg-[#0d4a64] px-6 py-3 font-semibold text-white transition hover:bg-[#072c3d]"
+                className="rounded-full bg-[#5bffa7] px-6 py-3 font-semibold text-[#02131f] transition hover:bg-white"
               >
                 Gönder
               </button>
@@ -485,18 +522,24 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="bg-[#030712] py-10 text-sm text-slate-300">
+      <footer className="bg-[#01050b] py-10 text-sm text-slate-300">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} AVAX Savunma. Tüm hakları saklıdır.</p>
+          <p className="text-slate-400">
+            © {new Date().getFullYear()} AVAX Savunma. Tüm hakları saklıdır.
+          </p>
           <div className="flex flex-wrap items-center gap-4">
             <Link
               href="mailto:info@avaxsavunma.com?subject=KVKK%20ve%20gizlilik%20bilgisi"
-              className="hover:text-white"
+              className="text-slate-400 transition hover:text-white"
             >
               KVKK & Çerez Politikası
             </Link>
             {socialLinks.map((social) => (
-              <Link key={social.label} href={social.href} className="hover:text-white">
+              <Link
+                key={social.label}
+                href={social.href}
+                className="text-slate-400 transition hover:text-white"
+              >
                 {social.label}
               </Link>
             ))}

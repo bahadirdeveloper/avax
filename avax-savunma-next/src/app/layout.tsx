@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Orbitron, Rajdhani } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const orbitron = Orbitron({
   subsets: ["latin"],
+  variable: "--font-orbitron",
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const rajdhani = Rajdhani({
   subsets: ["latin"],
+  variable: "--font-rajdhani",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const siteUrl = "https://avaxsavunma.com";
@@ -232,7 +234,7 @@ export default function RootLayout({
   return (
     <html lang="tr" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-white text-[#0f172a] antialiased`}
+        className={`${orbitron.variable} ${rajdhani.variable} bg-[#030712] text-[#e2e8f0] antialiased`}
       >
         <Script
           id="avax-savunma-schema"
